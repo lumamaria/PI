@@ -1,0 +1,89 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+
+{% block title_pag %}Detalhes dos Filmes{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/detalhe.css' %}">{% endblock %}
+
+
+{% block content %}
+
+<div class="content-header">
+    <div class="breadcrumb">
+        <a href="{% url 'dashboard' %}">Início</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="{% url 'filmes:lista' %}">Lista</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Detalhes de Filmes</span>
+    </div>
+</div>
+
+<div class="detail-container">
+    <div class="detail-hero">
+        <div class="detail-hero-content">
+            <h1 class="detail-title">O Agente Secreto</h1>
+            <span class="detail-badge">Categoria: Drama/Crime</span>
+        </div>
+        <div class="detail-hero-actions">
+            <button class="btn btn-secondary">✏️ Editar</button>
+            <button class="btn btn-danger">🗑️ Excluir</button>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h3 class="section-title">
+                <span class="section-icon">📋</span>
+                Informações Principais
+            </h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Campo 1:</span>
+                    <span class="info-value">Estética e Atmosfera dos Anos 70</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Campo 2:</span>
+                    <span class="info-value">Retrato da ditadura militar</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Campo 3:</span>
+                    <span class="info-value">Contemplação do esquecimento velado</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Campo 4:</span>
+                    <span class="info-value">Traz vieses da cultura popular empírica</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h3 class="section-title">
+                <span class="section-icon">📝</span>
+                Descrição
+            </h3>
+            <div class="description-box">
+                <p>
+                    O aclamado filme brasileiro O Agente Secreto (2025/2026), dirigido por Kleber Mendonça Filho e estrelado por Wagner Moura, é um thriller político e de suspense situado na década de 1970, durante o auge da ditadura militar. A narrativa acompanha Marcelo, um professor perseguido pelo regime que retorna ao Recife em busca de refúgio e de seu filho.
+                </p>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h3 class="section-title">
+                <span class="section-icon">ℹ️</span>
+                Informações Adicionais
+            </h3>
+            <ul class="info-list">
+                <li>Thriller de espionagem</li>
+                <li>Paranoia e censura da ditadura</li>
+                <li>As gravações ocorreram majoritariamente no Recife</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="detail-footer">
+        <a href="{% url 'dashboard' %}" class="btn btn-outline">← Voltar para Filmes</a>
+    </div>
+</div>
+
+{% endblock %}
+

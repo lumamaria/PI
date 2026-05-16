@@ -1,0 +1,143 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+
+{% block title_pag %}Lista dos Filmes{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/lista.css' %}">{% endblock %}
+
+
+{% block content %}
+   
+<div class="content-header">
+    <div class="breadcrumb">
+        <a href="{% url 'dashboard' %}">Início</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Lista de Filmes</span>
+    </div>
+    <h2 class="page-title">Lista de Filmes</h2>
+</div>
+
+<div class="list-controls">
+    <div class="search-box-container">
+        <input type="text" class="search-box" placeholder="🔍 Buscar itens...">
+    </div>
+    <button class="btn btn-primary btn-add">
+        <span class="btn-icon">➕</span>
+        Adicionar Novo Filme
+    </button>
+</div>
+
+<div class="items-container">
+
+    <div class="item-card">
+        <div class="item-content">
+            <div class="item-header">
+                <h3 class="item-title">O Agente Secreto</h3>
+                <span class="item-badge">Drama/Crime</span>
+            </div>
+            <p class="item-description">O filme "O Agente Secreto", é estrelado por Wagner Moura, um thriller de suspense ambientado no Recife da década de 1970. A trama aborda a perseguição política durante a ditadura militar, focando em Marcelo, um professor que adota uma identidade falsa e busca refúgio</p>
+            <div class="item-meta">
+                <span class="meta-item">📅 Data: 6 de novembro de 2025</span>
+                <span class="meta-item">👤 Autor: Kleber Mendonça Filho</span>
+            </div>
+        </div>
+        <div class="item-actions">
+            <a href="{% url 'filmes:detalhe' %}" class="btn-action btn-view" title="Ver detalhes">
+                <span>👁️</span>
+            </a>
+            <a href="#" class="btn-action btn-edit" title="Editar">
+                <span>✏️</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-content">
+            <div class="item-header">
+                <h3 class="item-title">O Auto da Compadecida</h3>
+                <span class="item-badge">Comédia/Aventura</span>
+            </div>
+            <p class="item-description">O filme "O Auto da Compadecida" é uma comédia clássica brasileira ambientada no sertão nordestino. A história acompanha João Grilo e Chicó, dois amigos pobres e espertos que usam a lábia para sobreviver à fome e enganar figuras poderosas, como o padre, o bispo e um cangaceiro.</p>
+            <div class="item-meta">
+                <span class="meta-item">📅 Data: 10 de setembro de 2000</span>
+                <span class="meta-item">👤 Autor: Ariano Suassuna</span>
+            </div>
+        </div>
+        <div class="item-actions">
+            <a href="{% url 'filmes:detalhe' %}" class="btn-action btn-view" title="Ver detalhes">
+                <span>👁️</span>
+            </a>
+            <a href="#" class="btn-action btn-edit" title="Editar">
+                <span>✏️</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-content">
+            <div class="item-header">
+                <h3 class="item-title">Cidade de Deus</h3>
+                <span class="item-badge">Crime/Drama</span>
+            </div>
+            <p class="item-description">O filme "Cidade de Deus" é um marco do cinema brasileiro. Aclamado internacionalmente e indicado a quatro Oscars, o longa narra a evolução do crime organizado na favela homônima do Rio de Janeiro entre as décadas de 1960 e 1980, sob o ponto de vista do fotógrafo Buscapé</p>
+            <div class="item-meta">
+                <span class="meta-item">📅 Data: 30 de agosto de 2002</span>
+                <span class="meta-item">👤 Autor: Paulo Lins</span>
+            </div>
+        </div>
+        <div class="item-actions">
+            <a href="{% url 'filmes:detalhe' %}" class="btn-action btn-view" title="Ver detalhes">
+                <span>👁️</span>
+            </a>
+            <a href="#" class="btn-action btn-edit" title="Editar">
+                <span>✏️</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-content">
+            <div class="item-header">
+                <h3 class="item-title">Manas</h3>
+                <span class="item-badge">Drama</span>
+            </div>
+            <p class="item-description">O filme "Manas" aborda a dura realidade da exploração sexual e do abuso infantil na Ilha do Marajó, no Pará. O longa retrata, de maneira sensível, a trajetória de Marcielle, uma menina de 13 anos que decide confrontar o ciclo de violência e machismo enraizado em sua família.</p>
+            <div class="item-meta">
+                <span class="meta-item">📅 Data: 2 de setembro de 2024</span>
+                <span class="meta-item">👤 Autor: Marianna Brennand Fortes</span>
+            </div>
+        </div>
+        <div class="item-actions">
+            <a href="{% url 'filmes:detalhe' %}" class="btn-action btn-view" title="Ver detalhes">
+                <span>👁️</span>
+            </a>
+            <a href="#" class="btn-action btn-edit" title="Editar">
+                <span>✏️</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-content">
+            <div class="item-header">
+                <h3 class="item-title">O Homem Que Copiava</h3>
+                <span class="item-badge">Comédia/Romance</span>
+            </div>
+            <p class="item-description">O filme "O Homem Que Copiava" traz uma crítica ao capitalismo moderno, André, um operador de fotocópia em Porto Alegre, sonha com uma vida melhor e Sílvia, o amor de sua vida. Tudo muda quando ele recebe uma copiadora a cores no trabalho e decide usá-la para copiar dinheiro.</p>
+            <div class="item-meta">
+                <span class="meta-item">📅 Data: 13 de junho de 2003</span>
+                <span class="meta-item">👤 Autor: Jorge Furtado</span>
+            </div>
+        </div>
+        <div class="item-actions">
+            <a href="{% url 'filmes:detalhe' %}" class="btn-action btn-view" title="Ver detalhes">
+                <span>👁️</span>
+            </a>
+            <a href="#" class="btn-action btn-edit" title="Editar">
+                <span>✏️</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+ 
+{% endblock %}

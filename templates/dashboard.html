@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title_pag %}Site de Filmes{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+        {% include 'includes/header.html' %}
+
+        {% include 'includes/menu_lateral.html' %}
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+
+            {% block content %}
+
+            <div class="content-header">
+                <h2 class="page-title">Filmes</h2>
+                <p class="page-subtitle">Visão geral do sistema de Filmes</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3 class="stat-label">Total de Filmes</h3>
+                        <p class="stat-value">5</p>
+                        <p class="stat-description">Filmes cadastrados</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3 class="stat-label">Últimos Filmes Adicionados</h3>
+                        <p class="stat-value">2</p>
+                        <p class="stat-description">Últimos 7 dias</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📁</div>
+                    <div class="stat-info">
+                        <h3 class="stat-label">Categorias de Filmes</h3>
+                        <p class="stat-value">5</p>
+                        <p class="stat-description">Categorias ativas de Filmes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-section">
+                <h3 class="section-title">Ações Rápidas</h3>
+                <div class="action-buttons">
+                    <a href="{% url 'filmes:lista' %}" class="btn btn-primary">
+                        <span class="btn-icon">📋</span>
+                        Ver Lista Completa de Filmes
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <span class="btn-icon">➕</span>
+                        Adicionar Novo Filme
+                    </a>
+                </div>
+            </div>
+            {% endblock %}
+        </main>
+    </div>
+
+</body>
+</html>
